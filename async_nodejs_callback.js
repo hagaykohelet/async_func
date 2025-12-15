@@ -36,36 +36,38 @@ import path from "path"
 
 // q3
 
-// function countdown(number, callback) {
-//     while(number >= 0){
+// function countdown(number,callback) {
+//     if(number == 0){
 //         console.log(number);
-//         number -=1
+//         setTimeout(() => {
+//             const str ="times up!" 
+//            callback(str)
+//         }, 1000);
+        
 //     }
-//     setTimeout(() => {
-//         const str = "times up"
-//         callback(str)
-//     }, 1000);
+//     else{
+//         console.log(number)
+//         countdown(number -1,callback)
+//     }
     
 // }
-
-
-// countdown(5, function (str) {
-//     console.log(str)
+// countdown(5,function (str){
+//     console.log(str);
 // })
 
 
-fs.readFile("quotes.txt",("utf8"),(err,data) =>{
-    if(err){
-        console.log(err)
-    }
-    else{
-        const line = data.split("\n")
-        const filetredLines = line.filter(line=> line.trim() !== "")
-        console.log(filetredLines);
-        const updatedContent = filetredLines.join("\n")
-        
-        console.log(updatedContent);
-        
-    }
-})
 
+// fs.readFile("quotes.txt",("utf8"),(err,data) =>{
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         const line = data.split("\n")
+//         const filetredLines = line.filter(line=> line.trim() !== "")
+//         console.log(filetredLines);
+//         const updatedContent = filetredLines.join("\n")
+        
+//         console.log(updatedContent);
+        
+//     }
+// })
